@@ -1,51 +1,4 @@
-/**
- * DarkStar
- * Theme CSS
- * Author: Dragan Milenkovic
- * Copyright - 2022 Skilltech Web Design - skilltechwebdesign.com
- * --------------------------------------------------------------
- *  1. Priority Load
- *  2. Overrides / Enhances
- *  3. Structure
- *  4. Navigation Menus
- *  5. Fonts
- *  6. Forms and Buttons
- *  7. General (transitions, sections, images, reusable style classes)
- *  8. Hero Section
- *  9. Half-screen Sections (parallax images, text, parallax text)
- * 10. Numbers Section
- * 11. About Us Section
- * 12. Partners Section
- * 13. Portfolio Section
- * 14. Featured Project Section
- * 15. Features Section
- * 16. Laptop Section
- * 17. Services Section
- * 18. Skills Section (& Testimonials Section)
- * 19. CTA Section (Warped CTA)
- * 20. Contact Us Section
- * 21. Browsers Section
- * 22. Custom Animations, Effects & Decorations
- * 23. Footer
- * 24. PAGE: Portfolio Item
- * 25. PAGE: Service Item
- * 26. PAGE: News (Blog)
- * 27. PAGE: News Item (Article)
- * 28. Media Queries
- * 29. Other
- * 30. Theme Elements & Theme Preview Only CSS
- * ---------------------------------
- * -- Colors are in theme-colors.css
- * ---------------------------------
- * -- Gear menu is in theme-preview-color-styler.css
- * -------------------------------------------------
- */
 
-
-/**
- * 1. Priority Load
- * ================
- */
 
 .sk__master-curtain {
 	position: fixed;
@@ -87,9 +40,13 @@
 } */
 
 .mcurtain-center {
-	background-image: url(../falspace/logo-svg-120.png);
-	left: 33.333%;
+    background-image: url(../falspace/falaspace-preloader.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120px 120px; /* ← SIZE HERE */
+    left: 33.333%;
 }
+
 
 /* .mcurtain-right {
 	background-image: url(../falspace/falaspace-preloader.svg);

@@ -1,9 +1,4 @@
-/**
- * DarkStar
- * Theme JS
- * Author: Dragan Milenkovic
- * Copyright - 2022 Skilltech Web Design - skilltechwebdesign.com
- */
+
 
 $(document).ready(function(){
 
@@ -17,7 +12,7 @@ $(document).ready(function(){
 	function isItMobileDevice() {
 		var isMobile = false; //initiate as false
 		// device detection
-		if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
+		if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
 		    || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))) isMobile = true;
 		return isMobile;
 	}
@@ -37,8 +32,8 @@ $(document).ready(function(){
 
 
 	/**
-	 * Fixer function - dispatches resize event unless 
-	 * body has a specified class. Fixes stutter on 
+	 * Fixer function - dispatches resize event unless
+	 * body has a specified class. Fixes stutter on
 	 * initial scroll where some GSAP effects are
 	 * present.
 	 * @param {string} $bodyClass - CSS selector
@@ -64,7 +59,7 @@ $(document).ready(function(){
 	/**
 	 * Setup GSAP
 	 */
-	
+
 	/**
 	 * GSAP - Register Plugins
 	 */
@@ -82,7 +77,7 @@ $(document).ready(function(){
 	/**
 	 * GSAP - Setup parallax images and videos (not hero)
 	 * Uses ScrollSmoother
-	 */ 
+	 */
 	smoother.effects( ".sk__parallax-container > img", { speed: "auto" } );
 	smoother.effects( ".sk__parallax-container > video", { speed: "auto" } );
 
@@ -92,7 +87,7 @@ $(document).ready(function(){
 	 * If sk__master-curtain HTML is present on the page, the
 	 * page will have the loading animation and a master delay
 	 * will be applied to a number of entrance effects.
-	 * 
+	 *
 	 * 2. Calculate and set the master delay value
 	 * the formula is: duration + delay + (stagger * 2)
 	 */
@@ -119,7 +114,7 @@ $(document).ready(function(){
 				stagger: masterCurtainStagger,
 				ease: "power2.in"
 			});
-		
+
 		setTimeout(function(){
 			$( '.sk__master-curtain' ).detach();
 		}, ((effectsMasterDelay + 0.7) * 1000));
@@ -236,7 +231,7 @@ $(document).ready(function(){
 	var heroSliderExists = $( '#sk__hero-carousel-slider .carousel-item' ).length;
 	if ( heroSliderExists ) {
 
-		// Count hero slider	
+		// Count hero slider
 		var numberOfHeroSlides = $( '#sk__hero-carousel-slider .carousel-item' ).length;
 
 		// Equalize JS values to CSS values
@@ -264,7 +259,7 @@ $(document).ready(function(){
 	}
 
 
-	// --- --- --- --- --- --- ### 
+	// --- --- --- --- --- --- ###
 	// --- --- --- --- --- --- ###  Animation Functions
 	// --- --- --- --- --- --- ###
 
@@ -293,14 +288,14 @@ $(document).ready(function(){
 
 			// firstly divide n by 10 to get the value which we'll use for delay
 			let theDelay = n/10;
-			
+
 			// now target only the class that starts with the expression
 			// and ends in number matching n
 			let elements = '.' + expression + n;
 
 			// and, for THAT class, create an each() function
 			$( elements ).each(function( i ) {
-				
+
 				// now we can enumerate all unique matches with a custom attribute
 				$( this ).attr( 'data-sk-fade-match', ( i + 1 ) );
 
@@ -323,7 +318,7 @@ $(document).ready(function(){
 
 					// and finally, create an animation
 					gsap.to( finalTarget, {
-						opacity: 1, 
+						opacity: 1,
 						ease: "power1.inOut",
 						scrollTrigger: {
 							trigger: finalTarget,
@@ -332,8 +327,8 @@ $(document).ready(function(){
 							toggleActions: "play complete",
 							scrub: false
 						},
-						duration: theDuration, 
-						delay: theDelay 
+						duration: theDuration,
+						delay: theDelay
 					});
 				}
 
@@ -343,7 +338,7 @@ $(document).ready(function(){
 		}
 	}
 	fadeInBasic();
-	
+
 
 	/**
 	 * GSAP-powered text-revealing "clip-mask" style effect (reusable).
@@ -402,7 +397,7 @@ $(document).ready(function(){
 
 			}
 
-		});	
+		});
 
 	}
 
@@ -414,7 +409,7 @@ $(document).ready(function(){
 	 * The rest is the same as revealText()
 	 */
 	function scrollRevealText( $element, $duration, $delay, $stagger, $fromDirection, $scrub, $startString, $endString, $toggleActions ) {
-		
+
 		let elementSelector = $element;
 
 		$( elementSelector ).each( function( i ) {
@@ -478,15 +473,15 @@ $(document).ready(function(){
 
 				let finalSelector = elementSelector + '-' + i;
 
-				gsap.fromTo( element, 
+				gsap.fromTo( element,
 					{
-						opacity:0, 
-						xPercent:xFrom, 
+						opacity:0,
+						xPercent:xFrom,
 						yPercent:yFrom
 					}, {
 						opacity: 1,
 						xPercent:0,
-						yPercent: 0, 
+						yPercent: 0,
 						ease: "power1.out",
 						scrollTrigger: {
 							trigger: element,
@@ -495,9 +490,9 @@ $(document).ready(function(){
 							toggleActions: theActions,
 							scrub: theScrub
 						},
-						duration: theDuration, 
-						stagger: theStagger, 
-						delay: theDelay 
+						duration: theDuration,
+						stagger: theStagger,
+						delay: theDelay
 				});
 
 			}
@@ -580,8 +575,8 @@ $(document).ready(function(){
 							opacity: 1,
 							scale: 1,
 							delay: theDelay,
-							stagger: staggerTime, 
-							duration: 0.6, 
+							stagger: staggerTime,
+							duration: 0.6,
 							scrollTrigger: {
 								trigger: theTrigger,
 								start: "top 80%",
@@ -652,7 +647,7 @@ $(document).ready(function(){
 
 	/**
 	 * Hero slider entrance animations
-	 */ 
+	 */
 	function homeHeroSliderEntranceAnimations() {
 
 		if ( heroSliderExists ) {
@@ -663,7 +658,7 @@ $(document).ready(function(){
 
 			// Phase 1 delay
 			let phaseOneDelay = effectsMasterDelay - 0.5;
-			if ( phaseOneDelay < 0 ) { 
+			if ( phaseOneDelay < 0 ) {
 				phaseOneDelay = 0;
 			}
 
@@ -678,7 +673,7 @@ $(document).ready(function(){
 			let phaseOneDelayMilisec = phaseOneDelay * 1000;
 			setTimeout(function(){
 				$( '#sk__hero-carousel-slider' ).find( '.first-load' ).removeClass( 'first-load' );
-			}, phaseOneDelayMilisec);		
+			}, phaseOneDelayMilisec);
 
 			/**
 			 * Zooming hero backgrounds animations (all slides)
@@ -697,7 +692,7 @@ $(document).ready(function(){
 				let heroActiveSlideFirstLoad = $( finalSelectorFirstLoad );
 				if ( heroActiveSlideFirstLoad.length ) {
 					let firstLoadSlideDelay = effectsMasterDelay - 1.2;
-					if ( firstLoadSlideDelay < 0 ) { 
+					if ( firstLoadSlideDelay < 0 ) {
 						firstLoadSlideDelay = 0;
 					}
 					gsap.timeline()
@@ -713,7 +708,7 @@ $(document).ready(function(){
 			zoomingHero( '.sk__parallax-background-element' );
 			zoomingHero( '.sk__morphing-hover-hero-container' );
 
-			
+
 			/**
 			 * Animate all elements with class '.animated-element' inside .active hero .carousel-item
 			 * Animate in two phases. Add delay for 'first-load'.
@@ -726,7 +721,7 @@ $(document).ready(function(){
 			let phase2FirstLoad = [];
 			let phase2Regular = [];
 			while ( n < numberOfHeroSlides + 1 ) {
-				
+
 				// Phase 1
 				phase1FirstLoad[n] = $( '#sk__hero-carousel-slider .hero-slide-' + n + '.carousel-item.active.first-load .animated-element.phase-1' );
 				if ( phase1FirstLoad[n].length ) {
@@ -765,14 +760,14 @@ $(document).ready(function(){
 			}
 
 		}
-		
+
 	}
 	homeHeroSliderEntranceAnimations();
 
 
 	/**
 	 * Hero slider exit animations
-	 */ 
+	 */
 
 	function homeHeroSliderExitAnimations() {
 
@@ -827,7 +822,7 @@ $(document).ready(function(){
 				n++;
 
 			}
-		
+
 		}
 
 	}
@@ -843,7 +838,7 @@ $(document).ready(function(){
 			let parallaxHeaderParent = $( this );
 			let parallaxHeaderImage = $( this ).find( '.sk__parallax-header-image' );
 			if ( ( parallaxHeaderParent.length ) && ( parallaxHeaderImage.length ) ) {
-				gsap.to( parallaxHeaderImage, 
+				gsap.to( parallaxHeaderImage,
 					{
 						top:200,
 						scrollTrigger: {
@@ -875,7 +870,7 @@ $(document).ready(function(){
 						if ( n == speed ) {
 							let finalSpeed = speed * 5;
 							finalSpeed = finalSpeed + '%';
-							gsap.to( element, 
+							gsap.to( element,
 								{
 									top:finalSpeed,
 									scrollTrigger: {
@@ -931,7 +926,7 @@ $(document).ready(function(){
 
 		proxy = {val: parseFloat(clean(element.innerText)) || 0}; // v1 - Start from the specified number
 		// proxy = {val: 0} // v2 - Start from 0, regardless of the number
-		
+
 		gsap.to(proxy, {
 			val: +num,
 			duration: 2,
@@ -949,7 +944,7 @@ $(document).ready(function(){
 	}
 
 
-	// --- --- --- --- --- --- ### 
+	// --- --- --- --- --- --- ###
 	// --- --- --- --- --- --- ###  Animation Functions - End
 	// --- --- --- --- --- --- ###
 
@@ -1121,10 +1116,10 @@ $(document).ready(function(){
 	function manageRingsSection() {
 		if ( screenRatio < 0.5656 ) {
 			$( '.sk__rings-section > .sk__full-height' ).css( 'height', '63vh' );
-		} 
+		}
 		if ( ( screenRatio >= 0.5656 ) && ( screenRatio <= 0.78358 ) ) {
 			$( '.sk__rings-section > .sk__full-height' ).css( 'height', '76vh' );
-		} 
+		}
 		if ( screenRatio > 0.78358 ) {
 			$( '.sk__rings-section > .sk__full-height' ).css( 'height', '100vh' );
 		}
@@ -1140,7 +1135,7 @@ $(document).ready(function(){
 				ringsLimitDimensions();
 			}
 		}
-	}	
+	}
 
 	// Rings section 1/2 - runs once more on window resize
 	manageRingsSection();
@@ -1172,7 +1167,7 @@ $(document).ready(function(){
 					let textWidth = $( hugeVerticalText ).width();
 					let distance = textWidth;
 
-					gsap.fromTo( hugeVerticalText, 
+					gsap.fromTo( hugeVerticalText,
 						{
 							x:wrapperWidth+wrapperWidth/2,
 						}, {
@@ -1187,7 +1182,7 @@ $(document).ready(function(){
 				}
 			});
 
-		}		
+		}
 	}
 
 
@@ -1219,7 +1214,7 @@ $(document).ready(function(){
 						n++;
 					}
 				});
-				
+
 				var warpTextOriginalElement = $( '.sk__cta-warp:not(.not-animated) .sk__warped-text-wrapper:not([class*="clone"]) .sk__warped-text' );
 				if ( warpTextOriginalElement.length ) {
 
@@ -1227,7 +1222,7 @@ $(document).ready(function(){
 					$( warpTextOriginalElement ).addClass( 'sk__gradient-fancy-text' );
 
 					// animate original
-					gsap.to( '.sk__cta-warp:not(.not-animated) .sk__warped-text-wrapper:not([class*="clone"])', 
+					gsap.to( '.sk__cta-warp:not(.not-animated) .sk__warped-text-wrapper:not([class*="clone"])',
 						{
 							opacity: 1,
 							ease: "power1.out",
@@ -1251,7 +1246,7 @@ $(document).ready(function(){
 					});
 
 					// animate clones
-					gsap.to( '.sk__cta-warp:not(.not-animated) .sk__warped-text-wrapper[class*="warped-text-clone"]', 
+					gsap.to( '.sk__cta-warp:not(.not-animated) .sk__warped-text-wrapper[class*="warped-text-clone"]',
 						{
 							x: 0,
 							opacity: 0,
@@ -1275,7 +1270,7 @@ $(document).ready(function(){
 						},
 					});
 
-				}	
+				}
 
 				// assign animation to subheading
 				var warpedTexth3 = $( '.sk__cta-warp h3' );
@@ -1293,7 +1288,7 @@ $(document).ready(function(){
 				// assign animation to button
 				var warpedTextButton = $( '.btn.sk__warped-button' );
 				if ( warpedTextButton.length ) {
-					gsap.fromTo( warpedTextButton, 
+					gsap.fromTo( warpedTextButton,
 						{
 							opacity: 0,
 						}, {
@@ -1316,11 +1311,11 @@ $(document).ready(function(){
 				$( '.sk__warped-text-wrapper .sk__warped-text' ).addClass( 'sk__gradient-fancy-text deblur' );
 				$( '.sk__cta-warp h3' ).addClass( 'sk__cta-warp-h3-unspaced' );
 				$( '.btn.sk__warped-button' ).css( 'opacity', '1' );
-				
-			}	
+
+			}
 
 		}
-			
+
 	}
 
 	// CTA section - Show non-animated version elements
@@ -1354,7 +1349,7 @@ $(document).ready(function(){
 	 * Hero slider (bootstrap carousel) sliding start event
 	 */
 	$( '#sk__hero-carousel-slider' ).bind( 'slide.bs.carousel', function (e) {
-		
+
 		// For fixing the parallax inactive slide height issue (1/2)
 		dispatchResizeExceptOn( 'sk__has-youtube-video' );
 
@@ -1390,21 +1385,21 @@ $(document).ready(function(){
 		var galleryNumber = i + 1;
 
 		// create navigation wrapper
-		$( 'body' ).prepend( '<div id="sk__parallax-gallery-nav-' + ( i + 1 ) + '" class="sk__parallax-gallery-nav"><div class="sk__parallax-gallery-nav-icon"></div></div>' );	
+		$( 'body' ).prepend( '<div id="sk__parallax-gallery-nav-' + ( i + 1 ) + '" class="sk__parallax-gallery-nav"><div class="sk__parallax-gallery-nav-icon"></div></div>' );
 
 		// Enumerate gallery items with new IDs
 		var items = $( this ).find( '.sk__gallery-item' );
 		$( items ).each(function(i){
 			$(this).attr( 'id', 'sk__gallery-' + galleryNumber + '-item-' + ( i + 1 ) );
 		});
-		
+
 		var numberOfItems = $( items ).length;
 		let n = 1;
 		while ( n < numberOfItems + 1 ) {
 
 			// insert navigation dots
 			$( '#sk__parallax-gallery-nav-' + ( i + 1 ) ).append( '<a id="sk__gallery-' + ( i + 1 ) + '-nav-link-' + n + '" href="#sk__gallery-' + ( i + 1 ) + '-item-' + n + '" class="sk__gallery-nav-link" data-gallery-item-number="' + n + '"></a>' );
-			
+
 			// assign ".active" class to nav dot of the active slide
 			window[ 'activeNavDotTL' + n ] = gsap.timeline({
 				scrollTrigger: {
@@ -1418,7 +1413,7 @@ $(document).ready(function(){
 			n++;
 
 		}
-		
+
 		// make gallery nav appear only while gallery is in the viewport
 		var section = $( this );
 		var thisNavInstance = $( '#sk__parallax-gallery-nav-' + ( i + 1 ) );
@@ -1432,7 +1427,7 @@ $(document).ready(function(){
 				toggleClass: {targets: thisNavInstance, className: "sk__gallery-nav-visible"},
 			},
 		});
-			
+
 	});
 
 
@@ -1465,7 +1460,7 @@ $(document).ready(function(){
 			}
 
 		}
-			
+
 	});
 
 
@@ -1485,7 +1480,7 @@ $(document).ready(function(){
 	}
 
 
-	// --- --- --- --- --- --- ### 
+	// --- --- --- --- --- --- ###
 	// --- --- --- --- --- --- ###  Animations
 	// --- --- --- --- --- --- ###
 
@@ -1527,7 +1522,7 @@ $(document).ready(function(){
 	// Hero background elements (on scroll)
 	let heroBackgroundOnScroll = $( '.carousel-item .sk__parallax-background-element' );
 	if ( heroBackgroundOnScroll.length ) {
-		gsap.fromTo( heroBackgroundOnScroll, 
+		gsap.fromTo( heroBackgroundOnScroll,
 			{
 				filter: "brightness(1)",
 			}, {
@@ -1539,12 +1534,12 @@ $(document).ready(function(){
 					scrub: true
 				}
 		});
-	}	
+	}
 
 	// Hero animated elements (on scroll)
 	let heroAnimatedElements = $( '.sk__hero-section .animated-element' ).parent();
 	if ( heroAnimatedElements.length ) {
-		gsap.fromTo( heroAnimatedElements, 
+		gsap.fromTo( heroAnimatedElements,
 			{
 				opacity: 1
 			}, {
@@ -1589,7 +1584,7 @@ $(document).ready(function(){
 	// Hero - mega text (on scroll)
 	let heroMegaTextOnScroll = $( '.sk__hero-section.sk__mega-video-text-section' );
 	if ( heroMegaTextOnScroll.length ) {
-		gsap.fromTo( heroMegaTextOnScroll, 
+		gsap.fromTo( heroMegaTextOnScroll,
 			{
 				filter: "brightness(1)",
 			}, {
@@ -1607,7 +1602,7 @@ $(document).ready(function(){
 	// Hero slider indicators (on scroll)
 	let heroSliderIndicators = $( '.sk__hero-section .carousel-indicators' );
 	if ( heroSliderIndicators.length ) {
-		gsap.fromTo( heroSliderIndicators, 
+		gsap.fromTo( heroSliderIndicators,
 			{
 				opacity: 1
 			}, {
@@ -1626,7 +1621,7 @@ $(document).ready(function(){
 	let heroSocialIcon = $( '.hero-socials span' );
 	if ( heroSocialIcon.length ) {
 		let socIconsDelay = effectsMasterDelay - 0.3;
-		if ( socIconsDelay < 0 ) { 
+		if ( socIconsDelay < 0 ) {
 			socIconsDelay = 0;
 		}
 		let heroSocialIcons = gsap.timeline()
@@ -1664,17 +1659,17 @@ $(document).ready(function(){
 		let halfScreenSectionsText = $( this );
 		let halfScreenTextElements = $( this ).find( '.animated-element' );
 		if ( ( halfScreenSectionsText.length ) && ( halfScreenTextElements.length ) ) {
-			gsap.fromTo( halfScreenTextElements, 
+			gsap.fromTo( halfScreenTextElements,
 				{
 					opacity:0,
 					y:40
 				}, {
 					opacity: 1,
-					y:0, 
+					y:0,
 					ease: "power1.out",
 					scrollTrigger: {
 						trigger: halfScreenSectionsText,
-						start: "top 50%", 
+						start: "top 50%",
 						end: "top 30%",
 						toggleActions: "play complete reverse pause",
 					},
@@ -1682,8 +1677,8 @@ $(document).ready(function(){
 			});
 		}
 	});
-		
-	// Portfolio thumbnails 
+
+	// Portfolio thumbnails
 	if ( isMobile != true ) {
 		let portfoilioThumbnailsSlider = $( '.sk__portfolio-wrapper:not(.not-slick)' );
 		if ( portfoilioThumbnailsSlider.length ) {
@@ -1752,7 +1747,7 @@ $(document).ready(function(){
 	// Partners images (on scroll)
 	let partnersImages = $( '.sk__partners > div' );
 	if ( partnersImages.length ) {
-		gsap.fromTo( partnersImages, 
+		gsap.fromTo( partnersImages,
 			{
 				opacity:0,
 			}, {
@@ -1772,7 +1767,7 @@ $(document).ready(function(){
 		let featuresItems = $( $selector );
 		let delayTime = $delayTime;
 		if ( featuresItems.length ) {
-			gsap.fromTo( featuresItems, 
+			gsap.fromTo( featuresItems,
 				{
 					opacity: 0,
 				}, {
@@ -1798,17 +1793,17 @@ $(document).ready(function(){
 	// Laptop mockup entrance animation
 	let laptopMockup = $( '.sk__laptop-mockup-subcontainer' );
 	if ( laptopMockup.length ) {
-		gsap.fromTo( laptopMockup, 
+		gsap.fromTo( laptopMockup,
 			{
 				opacity:0,
 				xPercent:-5
 			}, {
 				opacity: 1,
-				xPercent:0, 
+				xPercent:0,
 				ease: "power3.out",
 				scrollTrigger: {
 					trigger: laptopMockup,
-					start: "top 70%", 
+					start: "top 70%",
 					end: "top 30%",
 					toggleActions: 'play complete',
 					scrub: false
@@ -1820,10 +1815,10 @@ $(document).ready(function(){
 	// Browsers section mass fade in (on scroll)
 	function browserMockupsAnimate() {
 		$( '.sk__browsers-wrapper' ).each(function() {
-			let browserMockups = [ 
-				'.sk__browsers-wrapper > .sk__browsers-tablet', 
-				'.sk__browsers-wrapper > .sk__browsers-desktop', 
-				'.sk__browsers-wrapper > .sk__browsers-phone' 
+			let browserMockups = [
+				'.sk__browsers-wrapper > .sk__browsers-tablet',
+				'.sk__browsers-wrapper > .sk__browsers-desktop',
+				'.sk__browsers-wrapper > .sk__browsers-phone'
 			];
 			let n = 0;
 			while (n < 3) {
@@ -1848,7 +1843,7 @@ $(document).ready(function(){
 					toLeft = "84.0326332%";
 					theDelay = 0.6;
 				}
-				
+
 				let element = $( browserMockups[n] );
 				if ( element.length ) {
 					// and finally, create an animation
@@ -1868,8 +1863,8 @@ $(document).ready(function(){
 							toggleActions: "play complete",
 							scrub: false
 						},
-						duration: 0.8, 
-						delay: theDelay 
+						duration: 0.8,
+						delay: theDelay
 					});
 				}
 
@@ -1890,7 +1885,7 @@ $(document).ready(function(){
 	let skillBarEl = $( '.sk__skill-bar' );
 	if ( skillBarEl.length ) {
 		let skillBars = gsap.timeline()
-			gsap.fromTo( skillBarEl, 
+			gsap.fromTo( skillBarEl,
 				{
 					scaleX: 0,
 				}, {
@@ -1918,7 +1913,7 @@ $(document).ready(function(){
 	function iconBoxElementsEntrance( $element ) {
 		let element = $element;
 		let iconBoxTL = gsap.timeline()
-			.fromTo( element, 
+			.fromTo( element,
 				{
 					x: -100,
 					opacity: 0,
@@ -1945,7 +1940,7 @@ $(document).ready(function(){
 	/**
 	 * Portfolio item page (project page) animations
 	 */
-	
+
 	// Portfolio item page - header
 	let projectHeaderSection = $( '.sk__project-header' );
 	if ( projectHeaderSection.length ) {
@@ -1958,7 +1953,7 @@ $(document).ready(function(){
 		if ( isMobile != true ) {
 
 			//entire section on scroll
-			gsap.fromTo( projectHeaderSection, 
+			gsap.fromTo( projectHeaderSection,
 				{
 					filter: "brightness(1)",
 				}, {
@@ -2026,7 +2021,7 @@ $(document).ready(function(){
 		} else {
 
 			// Mobile device (reorder animations)
-	
+
 			// main heading
 			let phsHeading = $( '.sk__project-main-heading h1' );
 			if ( phsHeading.length ) {
@@ -2077,20 +2072,20 @@ $(document).ready(function(){
 			}
 
 		}
-			
+
 	}
 
 	// Portfolio item page - project body - image
 	let projectBodyImgColumn = $( '.sk__project-body-image-col' );
 	let projectBodyImg = $( '.sk__project-body-image-col img' );
 	if ( (projectBodyImg.length) && (projectBodyImgColumn.length) ) {
-		gsap.fromTo( projectBodyImg, 
+		gsap.fromTo( projectBodyImg,
 			{
 				opacity:0,
 				xPercent:100
 			}, {
 				opacity: 1,
-				xPercent:0, 
+				xPercent:0,
 				ease: "power1.out",
 				duration:1,
 				delay: 0.2,
@@ -2101,18 +2096,18 @@ $(document).ready(function(){
 				stagger: 0.08
 		});
 	}
-	
+
 	// Portfolio item page - project body - info elements
 	let projectBodyInfo = $( '.sk__project-body-info-col' );
 	let projectBodyInfoElements = $( '.sk__project-body-info-col .animated-element' );
 	if ( (projectBodyInfo.length) && (projectBodyInfoElements.length) ) {
-		gsap.fromTo( projectBodyInfoElements, 
+		gsap.fromTo( projectBodyInfoElements,
 			{
 				opacity:0,
 				x:-40
 			}, {
 				opacity: 1,
-				x:0, 
+				x:0,
 				ease: "power1.out",
 				scrollTrigger: {
 					trigger: projectBodyInfo,
@@ -2276,7 +2271,7 @@ $(document).ready(function(){
 		let parallaxHeroVideoTrigger = $( this );
 		let parallaxHeroVideo = $( this ).find( '.sk__parallax-hero-video' );
 		if ( (parallaxHeroVideo.length) && (parallaxHeroVideoTrigger.length) ) {
-			gsap.fromTo( parallaxHeroVideo, 
+			gsap.fromTo( parallaxHeroVideo,
 				{
 					yPercent: 0,
 				}, {
@@ -2327,7 +2322,7 @@ $(document).ready(function(){
 			});
 		}
 	});
-		
+
 	// Back to Top Button
 	let backToTopSection = $( '.sk__back-to-top-wrap' );
 	if (backToTopSection.length) {
@@ -2341,7 +2336,7 @@ $(document).ready(function(){
 		});
 	}
 
-	// --- --- --- --- --- --- ### 
+	// --- --- --- --- --- --- ###
 	// --- --- --- --- --- --- ###  Animations - End
 	// --- --- --- --- --- --- ###
 
@@ -2418,7 +2413,7 @@ $(document).ready(function(){
 				breakpoint: 768,
 				settings: {
 					slidesToShow: 3,
-					slidesToScroll: 3, 
+					slidesToScroll: 3,
 					arrows: false
 				}
 			},
@@ -2426,7 +2421,7 @@ $(document).ready(function(){
 				breakpoint: 680,
 				settings: {
 					slidesToShow: 2,
-					slidesToScroll: 2, 
+					slidesToScroll: 2,
 					arrows: false
 				}
 			}
@@ -2449,7 +2444,7 @@ $(document).ready(function(){
 	}
 
 	// Hero mega text - remove initial text spacing class
-	let heroMegaText = $( '.h1-hero-mega-text' ); 
+	let heroMegaText = $( '.h1-hero-mega-text' );
 	if ( heroMegaText.length ) {
 		let megaTextDelayMS = ( effectsMasterDelay - 1.1 ) * 1000;
 		if ( megaTextDelayMS < 0 ) {
@@ -2513,7 +2508,7 @@ $(document).ready(function(){
 		alignSocialsWithHeading();
 
 		// Vertical decorative text animation 1/2
-		hugeDecorativeVerticalTexts();	
+		hugeDecorativeVerticalTexts();
 
 		// CTA section (warped text cta) 2/2
 		warpedText();
@@ -2629,7 +2624,7 @@ $(document).ready(function(){
 	revealText( '.sk__icons-presentation-section h1', 0.4, 0.4 );
 	revealText( '.sk__icons-presentation-section h2', 0.4, 0.6, 0.3, 'top' );
 	massFadeIn( '.sk__icons-presentation-icons', '.sk__icons-presentation-icons > *', 0.03, '[0,0]', 1.4 );
-	
+
 	// Theme elements - GSAP - features images mass fade in
 	massFadeIn( '.gsap-features', '.gsap-features .img-feature-wrap', 0.1, '[0,0]' );
 
@@ -2639,17 +2634,17 @@ $(document).ready(function(){
 	$( '.sk__imagebox' ).each( function( i ) {
 		let element = $( this );
 		if ( element.length ) {
-			gsap.fromTo( element, 
+			gsap.fromTo( element,
 				{
 					opacity:0,
 					x:-20
 				}, {
 					opacity: 1,
-					x:0, 
+					x:0,
 					ease: "power3.out",
 					scrollTrigger: {
 						trigger: element,
-						start: "top 80%", 
+						start: "top 80%",
 						end: "top 30%",
 						toggleActions: 'play complete',
 						scrub: false
